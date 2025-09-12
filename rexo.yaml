@@ -1,0 +1,58 @@
+# Rexo 框架配置文件
+name: "Rexo"
+version: "1.0.0"
+description: "全栈 React 研发框架"
+
+# 后端配置
+backend:
+  language: "go"
+  version: "1.21+"
+  framework: "gin"
+  database:
+    driver: "postgresql"  # postgresql, mysql, sqlite
+    host: "localhost"
+    port: 5432
+    name: "rexo_db"
+    username: "rexo_user"
+    password: "rexo_pass"
+  cache:
+    driver: "redis"
+    host: "localhost"
+    port: 6379
+  auth:
+    jwt_secret: "your-jwt-secret-key"
+    jwt_expire: "24h"
+    refresh_expire: "168h"  # 7 days
+
+# 前端配置
+frontend:
+  language: "typescript"
+  framework: "react"
+  version: "18"
+  build_tool: "vite"
+  ui_framework: "tailwind"
+  state_management: "zustand"
+  routing: "react-router"
+
+# 开发配置
+development:
+  hot_reload: true
+  port:
+    backend: 8080
+    frontend: 3000
+  proxy: true
+
+# 构建配置
+build:
+  output_dir: "dist"
+  minify: true
+  sourcemap: true
+
+# 部署配置
+deployment:
+  docker: true
+  ci_cd: "github-actions"
+  environments:
+    - development
+    - staging
+    - production
