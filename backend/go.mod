@@ -16,4 +16,8 @@ require (
 	github.com/go-playground/validator/v10 v10.14.0
 	github.com/gofiber/contrib/jwt v1.0.0
 	github.com/gofiber/contrib/logger v1.0.0
+	// SSR 相关依赖
+	github.com/robertkrimen/otto v0.2.1
+	github.com/gin-gonic/gin v1.9.1
+	github.com/gorilla/websocket v1.5.0
 )
