@@ -24,7 +24,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './index.html',
-        ssr: './src/ssr/main.tsx',
+        ssr: './src/main-ssr.tsx',
       },
       output: {
         entryFileNames: (chunkInfo) => {
